@@ -1,0 +1,19 @@
+import random
+playing = True
+num = random.randint(1,10)
+while playing:
+    numguess = input("Can you guess the number?\nGuess a number between 1 and 10: ")
+    numguess1 = int(numguess)
+    if numguess1 == num:
+        print("You got it right!")
+        playagain = input("Would you like to play again?\nType \"Yes\" or \"No\": ")
+        playcap = playagain.capitalize()
+        if playcap == "Yes":
+            print("Great!")
+            num = random.randint ( 1, 10 )
+        elif playcap == "No":
+            break
+    elif numguess1 != num :
+        print ( "Sorry, guess again!" )
+
+print("See you next time!")
